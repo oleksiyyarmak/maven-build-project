@@ -9,7 +9,7 @@ if [ $ret -ne 0 ]; then
     exit $ret
 fi
 
-java -jar ../initial/target/target/gs-maven-0.1.0.jar | tail -1 > target/actual.txt
+java -jar target/gs-maven-0.1.0.jar | tail -1 > target/actual.txt
 
 echo "Let's look at the actual results: `cat target/actual.txt`"
 echo "And compare it to: `cat ../test/expected.txt`"
