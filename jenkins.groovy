@@ -27,7 +27,7 @@ node (label: 'master')
             // println app_info
             def xmlText = new XmlParser().parseText(app_info)
             println "Bla"
-            println xmlText.@status
+            println xmlText.@legacy.version
 
 
 		}
