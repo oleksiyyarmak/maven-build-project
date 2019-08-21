@@ -26,7 +26,7 @@ node (label: 'master')
             def app_info = readFile(file: 'pom.xml')
             println "Trftff"
             // println app_info
-            def xmlText = readMavenPom(file: 'app_info')
+            def xmlText = readMavenPom(file: 'pom.xml')
             println "Bla"
             // println xmlText.@'legacy.version'
 
