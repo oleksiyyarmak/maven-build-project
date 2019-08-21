@@ -32,5 +32,6 @@ node (label: 'master')
             xmlText.properties['legacy.version'] = "Cp"
             writeMavenPom(model: xmlText, file: 'pom.xml')
             println readFile(file: 'pom.xml')
+          }
 
 }
