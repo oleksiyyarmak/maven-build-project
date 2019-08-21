@@ -24,10 +24,10 @@ node (label: 'master')
           stage ('parse') {
             def app_info = readFile(file: 'pom.xml')
             println "Trftff"
-            println app_info
-            def xmlText =new XmlSlurper().parseText(app_info)
+            // println app_info
+            def xmlText = new XmlParser().parseText(app_info)
             println "Bla"
-            println xmlText
+            println xmlText.@status
 
 
 		}
