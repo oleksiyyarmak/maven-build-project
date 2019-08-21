@@ -26,7 +26,7 @@ node (label: 'master')
             println "Trftff"
             def xmlText = new XmlParser().parseText(app_info)
             println "Bla"
-            println "Name ${xmlText.properties.'legacy.version'}"
+            println "Name ${xmlText.'legacy.version'}"
 
 
 		}
