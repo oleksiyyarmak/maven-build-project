@@ -22,12 +22,13 @@ node (label: 'master')
 
         }
           stage ('parse') {
+
             def app_info = readFile(file: 'pom.xml')
             println "Trftff"
             // println app_info
-            def xmlText = new XmlParser().parseText(app_info)
+            def xmlText = readMavenPom(file: 'app_info')
             println "Bla"
-            println xmlText.@'legacy.version'
+            // println xmlText.@'legacy.version'
 
 
 		}
