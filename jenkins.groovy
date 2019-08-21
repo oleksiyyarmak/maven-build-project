@@ -26,7 +26,7 @@ node (label: 'master')
             println "Trftff"
             def xmlText = XmlParser.parseText(app_info)
             println "Bla"
-            println xmlText
+            // println xmlText
 
 
 		}
