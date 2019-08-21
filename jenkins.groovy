@@ -24,7 +24,7 @@ node (label: 'master')
           stage ('parse') {
             def app_info = readFile(file: 'pom.xml')
             println "Trftff"
-            def xmlText = new XmlSlurper().parse(app_info)
+            def xmlText = new XmlParser.parseText(app_info)
             println "Bla"
             println xmlText
 
