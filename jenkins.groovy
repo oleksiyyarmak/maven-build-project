@@ -22,10 +22,11 @@ node (label: 'master')
 
         }
           stage ('parse') {
-            def app_info = readFile(file: 'pom.xml') 
+            def app_info = readFile(file: 'pom.xml')
+            println "Trftff"
             def xmlText = new XmlSlurper().parse(app_info)
             println xmlText
-            
+
 
 		}
 
