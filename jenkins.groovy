@@ -25,7 +25,7 @@ node (label: 'master')
             script{
                       revision="2.1.${BUILD_NUMBER}-legacy-trit"
                      }
-            println "Revision: $revision"
+            println "Revision: ${revision.text()}"
 
             def app_info = readFile(file: 'pom.xml')
             println "Test1"
@@ -33,7 +33,7 @@ node (label: 'master')
             def xmlText = readMavenPom(file: 'pom.xml')
             println "Test2"
             println xmlText.properties['legacy.version']
-            xmlText.properties['legacy.version'] = "${revision.text()}"
+            xmlText.properties['legacy.version'] = "ssss"
             writeMavenPom(model: xmlText, file: 'pom.xml')
             println readFile(file: 'pom.xml')
           }
