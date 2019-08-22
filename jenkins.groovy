@@ -25,7 +25,7 @@ node (label: 'master')
             script{
                       revision="2.1.${BUILD_NUMBER}-legacy-trit"
                      }
-            println "Revision: ${revision.text()}"
+            println "Revision: ${revision}"
 
             def app_info = readFile(file: 'pom.xml')
             println "Test1"
