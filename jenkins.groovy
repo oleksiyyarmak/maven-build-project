@@ -54,16 +54,18 @@ node (label: 'master')
     stage ('checkout git')
       {
 
-            println 'Checkout Gitlab...'
-            checkout([$class: 'GitSCM', branches: [[name: "*/master"]],
-            doGenerateSubmoduleConfigurations: false,
-            extensions: [[$class: 'CleanBeforeCheckout']],
-            submoduleCfg: [],
-            userRemoteConfigs: [[credentialsId: 'oleksiyyarmak',
-            name: 'origin',
-            refspec: '',
-            url: 'https://github.com/oleksiyyarmak/maven-build-project.git']]]
-            ])
+
+                  println 'Checkout Gitlab...'
+                  checkout([$class: 'GitSCM', branches: [[name: "*/master"]],
+                  doGenerateSubmoduleConfigurations: false,
+                  extensions: [[$class: 'CleanBeforeCheckout']],
+                  submoduleCfg: [],
+                  userRemoteConfigs: [[credentialsId: 'oleksiyyarmak',
+                  name: 'origin',
+                  refspec: '',
+                  url: 'https://github.com/oleksiyyarmak/maven-build-project.git']]
+                  ])
+
             sh "pwd"
             sh "ls -lsa"
             sh "git branch"
