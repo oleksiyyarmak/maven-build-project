@@ -21,15 +21,18 @@ node (label: 'master')
             ])
 
         }
-          stage ('parse') {
+          stage ('Parsing and modifying pom.xml') {
+            script{
+                      revision="2.1.${BUILD_NUMBER}-legacy-trit"
+                     }
 
             def app_info = readFile(file: 'pom.xml')
             println "Trftff"
-            // println app_info
+            println app_info
             def xmlText = readMavenPom(file: 'pom.xml')
             println "Bla"
             println xmlText.properties['legacy.version']
-            xmlText.properties['legacy.version'] = "Cp"
+            xmlText.properties['legacy.version'] = "${revision}"
             writeMavenPom(model: xmlText, file: 'pom.xml')
             println readFile(file: 'pom.xml')
           }
