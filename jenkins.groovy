@@ -36,7 +36,7 @@ node (label: 'master')
           def xmlText = readMavenPom(file: 'pom.xml')
           println "Test2"
           println xmlText.properties['legacy.version']
-          def xmlText.properties['legacy.version'] = "${revision}".toString()
+          xmlText.properties['legacy.version'] = "${revision}".toString()
           println xmlText.properties['legacy.version']
           writeMavenPom(model: xmlText, file: 'pom.xml')
           println readFile(file: 'pom.xml')
