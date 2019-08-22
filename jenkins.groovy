@@ -41,7 +41,7 @@ node (label: 'master')
           writeMavenPom(model: xmlText, file: 'pom.xml')
           println readFile(file: 'pom.xml')
           sh "git add ."
-          sh "git commit -m "version revision builded""
+          sh "git commit -m 'version revision builded'"
           sh "git push"
     }
 
