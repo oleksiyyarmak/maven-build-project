@@ -40,12 +40,12 @@ node (label: 'master')
           println xmlText.properties['legacy.version']
           writeMavenPom(model: xmlText, file: 'pom.xml')
           println readFile(file: 'pom.xml')
-          git url: "https://github.com/oleksiyyarmak/maven-build-project.git",
-              credentialsId: 'oleksiyyarmak',
-              branch: master
+          // git url: "https://github.com/oleksiyyarmak/maven-build-project.git",
+          //     credentialsId: 'oleksiyyarmak',
+          //     branch: master
           sh "git add ."
           sh "git commit -m 'version revision builded'"
-          sh "git push"
+          sh "git push origin master"
     }
 
 }
