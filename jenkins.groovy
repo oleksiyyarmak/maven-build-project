@@ -30,9 +30,9 @@ node (label: 'master')
                  }
           println "Revision: ${revision}"
 
-          def app_info = readFile(file: 'pom.xml')
-          println "Test1"
-          println app_info
+          // def app_info = readFile(file: 'pom.xml')
+          // println "Test1"
+          // println app_info
           def xmlText = readMavenPom(file: 'pom.xml')
           println "Test2"
           println xmlText.properties['legacy.version']
@@ -40,10 +40,6 @@ node (label: 'master')
           println xmlText.properties['legacy.version']
           writeMavenPom(model: xmlText, file: 'pom.xml')
           println readFile(file: 'pom.xml')
-          // git url: "https://github.com/oleksiyyarmak/maven-build-project.git",
-          //     credentialsId: 'oleksiyyarmak',
-          //     branch: master
-
 
     }
     // stage ('Parsing and modifying pom.xml')
