@@ -43,12 +43,7 @@ node (label: 'master')
           // git url: "https://github.com/oleksiyyarmak/maven-build-project.git",
           //     credentialsId: 'oleksiyyarmak',
           //     branch: master
-          sh "pwd"
-          sh "ls -lsa"
-          sh "git branch"
-          sh "git add ."
-          sh "git commit -m 'version revision builded'"
-          sh "git push origin HEAD:master"
+
     }
 
     stage ('checkout git')
@@ -65,13 +60,14 @@ node (label: 'master')
                   refspec: '',
                   url: 'https://github.com/oleksiyyarmak/maven-build-project.git']]
                   ])
+                  sh "pwd"
+                  sh "ls -lsa"
+                  sh "git branch"
+                  sh "git add ."
+                  sh "git commit -m 'version revision builded'"
+                  sh "git push origin HEAD:master"
 
-            sh "pwd"
-            sh "ls -lsa"
-            sh "git branch"
-            sh "git add ."
-            sh "git commit -m 'version revision builded'"
-            sh "git push origin HEAD:master"
+
       }
 
 
