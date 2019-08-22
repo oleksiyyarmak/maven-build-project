@@ -34,7 +34,7 @@ node (label: 'master')
             println "Test2"
             println xmlText.properties['legacy.version']
             xmlText.properties['legacy.version'] = "${revision}"
-            // println xmlText.properties['legacy.version']
+            println xmlText.properties['legacy.version']
             writeMavenPom(model: xmlText, file: 'pom.xml')
             println readFile(file: 'pom.xml')
           }
