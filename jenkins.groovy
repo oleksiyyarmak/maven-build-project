@@ -43,33 +43,14 @@ node (label: 'master')
           // git url: "https://github.com/oleksiyyarmak/maven-build-project.git",
           //     credentialsId: 'oleksiyyarmak',
           //     branch: master
+          sh "pwd"
+          sh "ls -lsa"
+          sh "git branch"
+          sh "git add ."
+          sh "git commit -m 'version revision builded'"
+          sh "git push origin HEAD:master"
 
     }
-
-    stage ('checkout git')
-      {
-
-
-                  println 'Checkout Gitlab...'
-                  checkout([$class: 'GitSCM', branches: [[name: "*/master"]],
-                  doGenerateSubmoduleConfigurations: false,
-                  extensions: [[$class: 'CleanBeforeCheckout']],
-                  submoduleCfg: [],
-                  userRemoteConfigs: [[credentialsId: 'oleksiyyarmak',
-                  name: 'origin',
-                  refspec: '',
-                  url: 'https://github.com/oleksiyyarmak/maven-build-project.git']]
-                  ])
-                  sh "pwd"
-                  sh "ls -lsa"
-                  sh "git branch"
-                  sh "git add ."
-                  sh "git commit -m 'version revision builded'"
-                  sh "git push origin HEAD:master"
-
-
-      }
-
-
+    
 
 }
