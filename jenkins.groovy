@@ -43,6 +43,7 @@ node (label: 'master')
           // git url: "https://github.com/oleksiyyarmak/maven-build-project.git",
           //     credentialsId: 'oleksiyyarmak',
           //     branch: master
+          sh "ls -lsa"
           sh "git add ."
           sh "git commit -m 'version revision builded'"
           sh "git push origin master"
