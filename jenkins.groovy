@@ -48,7 +48,7 @@ node (label: 'master')
           sh "git branch"
           sh "git add ."
           sh "git commit -m 'version revision builded'"
-          sh "git push -u origin master"
+          sh "git push -ur"
     }
 
 }
