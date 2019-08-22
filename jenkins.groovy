@@ -43,6 +43,9 @@ node (label: 'master')
           // git url: "https://github.com/oleksiyyarmak/maven-build-project.git",
           //     credentialsId: 'oleksiyyarmak',
           //     branch: master
+          git url: "https://github.com/oleksiyyarmak/maven-build-project.git",
+          credentialsId: 'oleksiyyarmak',
+          branch: master
           sh "pwd"
           sh "ls -lsa"
           sh "git branch"
