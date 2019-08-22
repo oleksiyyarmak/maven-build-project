@@ -40,7 +40,7 @@ node (label: 'master')
           println xmlText.properties['legacy.version']
           writeMavenPom(model: xmlText, file: 'pom.xml')
           println readFile(file: 'pom.xml')
-          sh "git commit -am "new version revision builded""
+          sh "git commit -am "version revision builded""
           sh "git push"
     }
 
