@@ -4,7 +4,13 @@ import hudson.model.*
 import hudson.EnvVars
 import org.jenkinsci.plugins.pipeline.modeldefinition.Utils
 import org.apache.commons.io.FileUtils
-
+properties {
+        sidebarLinks {
+            // use built-in image
+            link('https://jira.acme.org/', 'JIRA')
+            
+        }
+    }
 node (label: 'master')
 {
   stage ('clone_git_repo')
@@ -43,18 +49,4 @@ node (label: 'master')
           println readFile(file: 'pom.xml')
 
     }
-    // stage ('Parsing and modifying pom.xml')
-    //   {
-    //     git url: "https://github.com/oleksiyyarmak/maven-build-project.git",
-    //     credentialsId: 'oleksiyyarmak',
-    //     branch: master
-    //     sh "pwd"
-    //     sh "ls -lsa"
-    //     sh "git branch"
-    //     sh "git add ."
-    //     sh "git commit -m 'version revision builded'"
-    //     sh "git push origin master --force"
-    //   }
-
-
-}
+ }
