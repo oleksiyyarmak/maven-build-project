@@ -1,4 +1,3 @@
-
 pipeline {
 properties {
         sidebarLinks {
@@ -14,4 +13,5 @@ stage ('clone_git_repo')
             }
 
 
+}
 }
