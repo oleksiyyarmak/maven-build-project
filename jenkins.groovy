@@ -1,4 +1,9 @@
 pipeline {
+    agent {
+    node {
+      label 'master'
+       }
+         }
 	stages {
 stage ('clone_git_repo')
     {
@@ -8,7 +13,7 @@ stage ('clone_git_repo')
             }
 			sidebarLinks {
             // use built-in image
-            link('https://jira.acme.org/', 'JIRA', 'notepad.png')
+            links('https://jira.acme.org/', 'JIRA', 'notepad.png')
             
         }
 	}
