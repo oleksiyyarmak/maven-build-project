@@ -11,9 +11,9 @@ stage ('clone_git_repo')
             script {
             println "Hello"
             }
-			sidebarLinks {
-            // use built-in image
-            links('https://jira.acme.org/', 'JIRA', 'notepad.png')
+	sidebarLinks {
+           link('https://jira.acme.org/', 'JIRA', 'notepad.png')
+		   link('https://wiki.acme.org/', 'Wiki', '/userContent/wiki.png')
             
         }
 	}
