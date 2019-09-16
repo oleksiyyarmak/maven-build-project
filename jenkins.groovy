@@ -7,7 +7,7 @@ import org.apache.commons.io.FileUtils
 properties {
         sidebarLinks {
             // use built-in image
-            link('https://jira.acme.org/', 'JIRA')
+            link('https://jira.acme.org/', 'JIRA', 'notepad.png')
             
         }
     }
